@@ -1028,7 +1028,7 @@ export class MovieDb {
     params?: any,
     axiosConfig?: AxiosRequestConfig,
   ): Promise<types.WatchProviderRegionResponse> {
-    return this.makeRequest(HttpMethod.Get, 'tv/episode_group/:id', params, axiosConfig)
+    return this.makeRequest(HttpMethod.Get, 'watch/providers/regions', params, axiosConfig)
   }
 
 }

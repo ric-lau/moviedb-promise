@@ -541,7 +541,7 @@ class MovieDb {
         return this.makeRequest(types_1.HttpMethod.Get, 'tv/episode_group/:id', params, axiosConfig);
     }
     watchProviderRegions(params, axiosConfig) {
-        return this.makeRequest(types_1.HttpMethod.Get, 'tv/episode_group/:id', params, axiosConfig);
+        return this.makeRequest(types_1.HttpMethod.Get, 'watch/providers/regions', params, axiosConfig);
     }
 }
 exports.MovieDb = MovieDb;

@@ -176,5 +176,6 @@ export declare class MovieDb {
     networkImages(params: string | number | types.IdRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.CompanyImagesResponse>;
     review(params: string | number | types.IdRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.Review>;
     episodeGroup(params: string | number | types.IdRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.EpisodeGroupResponse>;
+    watchProviderRegions(params?: any, axiosConfig?: AxiosRequestConfig): Promise<types.WatchProviderRegionResponse>;
 }
 //# sourceMappingURL=moviedb.d.ts.map

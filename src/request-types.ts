@@ -8,7 +8,7 @@ export interface AppendToResponseRequest {
   append_to_response?: string
 }
 
-export interface IdAppendToResponseRequest extends IdRequestParams, AppendToResponseRequest {}
+export interface IdAppendToResponseRequest extends IdRequestParams, AppendToResponseRequest { }
 
 export interface PagedRequestParams extends IdRequestParams {
   page?: number
@@ -449,20 +449,20 @@ export interface CollectionTranslationsResponse extends Response {
 export interface DiscoverMovieRequest extends RequestParams {
   region?: string
   sort_by?:
-    | 'popularity.asc'
-    | 'popularity.desc'
-    | 'release_date.asc'
-    | 'release_date.desc'
-    | 'revenue.asc'
-    | 'revenue.desc'
-    | 'primary_release_date.asc'
-    | 'primary_release_date.desc'
-    | 'original_title.asc'
-    | 'original_title.desc'
-    | 'vote_average.asc'
-    | 'vote_average.desc'
-    | 'vote_count.asc'
-    | 'vote_count.desc'
+  | 'popularity.asc'
+  | 'popularity.desc'
+  | 'release_date.asc'
+  | 'release_date.desc'
+  | 'revenue.asc'
+  | 'revenue.desc'
+  | 'primary_release_date.asc'
+  | 'primary_release_date.desc'
+  | 'original_title.asc'
+  | 'original_title.desc'
+  | 'vote_average.asc'
+  | 'vote_average.desc'
+  | 'vote_count.asc'
+  | 'vote_count.desc'
   certification_country?: string
   certification?: string
   'certification.lte'?: string
@@ -725,7 +725,7 @@ export interface VideosResponse extends Response {
   results?: Array<Video>
 }
 
-export interface MovieTranslationsResponse extends CollectionTranslationsResponse {}
+export interface MovieTranslationsResponse extends CollectionTranslationsResponse { }
 
 export interface MovieRecommendationsRequest extends IdRequestParams {
   page?: string
@@ -735,15 +735,15 @@ export interface MovieRecommendationsResponse extends PaginatedResponse {
   results?: Array<MovieResult>
 }
 
-export interface SimilarMovieResponse extends MovieRecommendationsResponse {}
+export interface SimilarMovieResponse extends MovieRecommendationsResponse { }
 
-export interface MovieReviewsRequest extends MovieRecommendationsRequest {}
+export interface MovieReviewsRequest extends MovieRecommendationsRequest { }
 
 export interface MovieReviewsResponse extends PaginatedResponse {
   results?: Array<Review>
 }
 
-export interface MovieListsRequest extends MovieRecommendationsRequest {}
+export interface MovieListsRequest extends MovieRecommendationsRequest { }
 
 export interface MovieListsResponse extends PaginatedResponse {
   results?: Array<MovieList>
@@ -771,13 +771,13 @@ export interface MovieNowPlayingResponse extends PaginatedResponse {
   }
 }
 
-export interface PopularMoviesRequest extends MovieNowPlayingRequest {}
+export interface PopularMoviesRequest extends MovieNowPlayingRequest { }
 
-export interface PopularMoviesResponse extends DiscoverMovieResponse {}
+export interface PopularMoviesResponse extends DiscoverMovieResponse { }
 
-export interface TopRatedMoviesRequest extends MovieNowPlayingRequest {}
+export interface TopRatedMoviesRequest extends MovieNowPlayingRequest { }
 
-export interface TopRatedMoviesResponse extends DiscoverMovieResponse {}
+export interface TopRatedMoviesResponse extends DiscoverMovieResponse { }
 
 export interface UpcomingMoviesRequest extends MovieNowPlayingRequest {
   page?: number
@@ -939,11 +939,11 @@ export interface TvSeasonChangesResponse extends Response {
       action?: string
       time?: string
       value?:
-        | string
-        | {
-            episode_id?: number
-            episode_number?: number
-          }
+      | string
+      | {
+        episode_id?: number
+        episode_number?: number
+      }
       iso_639_1?: string
       original_value?: string
     }>
@@ -956,10 +956,10 @@ export interface TvSeasonAccountStatesResponse extends Response {
     id?: number
     episode_number?: number
     rated?:
-      | boolean
-      | {
-          value?: number
-        }
+    | boolean
+    | {
+      value?: number
+    }
   }>
 }
 
@@ -1455,4 +1455,12 @@ export interface EpisodeGroupResponse extends Response {
   }>
   network?: Network
   type?: number
+}
+
+export interface WatchProviderRegionResponse extends Response {
+  results: Array<{
+    iso_3166_1: string,
+    english_name: string,
+    native_name: string
+  }>
 }

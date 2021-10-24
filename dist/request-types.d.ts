@@ -1293,5 +1293,12 @@ export interface EpisodeGroupResponse extends Response {
     network?: Network;
     type?: number;
 }
+export interface WatchProviderRegionResponse extends Response {
+    results: Array<{
+        iso_3166_1: string;
+        english_name: string;
+        native_name: string;
+    }>;
+}
 export {};
 //# sourceMappingURL=request-types.d.ts.map

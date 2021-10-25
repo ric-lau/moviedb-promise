@@ -10,6 +10,7 @@ import {
   QueueItem,
 } from './types'
 import * as types from './request-types'
+import { RegionalRequestParams } from './request-types'
 
 export class MovieDb {
   private apiKey: string
@@ -1024,11 +1025,15 @@ export class MovieDb {
     return this.makeRequest(HttpMethod.Get, 'tv/episode_group/:id', params, axiosConfig)
   }
 
-  watchProviderRegions(
-    params?: any,
-    axiosConfig?: AxiosRequestConfig,
-  ): Promise<types.WatchProviderRegionResponse> {
+  watchProviderRegions(params?: any, axiosConfig?: AxiosRequestConfig): Promise<types.WatchProviderRegionResponse> {
     return this.makeRequest(HttpMethod.Get, 'watch/providers/regions', params, axiosConfig)
   }
 
+  movieProviders(params: RegionalRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.RegionalWatchProviderResponse> {
+    return this.makeRequest(HttpMethod.Get, 'watch/providers/movie', params, axiosConfig)
+  }
+
+  tvProviders(params: RegionalRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.RegionalWatchProviderResponse> {
+    return this.makeRequest(HttpMethod.Get, 'watch/providers/tv', params, axiosConfig)
+  }
 }

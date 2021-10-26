@@ -639,6 +639,7 @@ export interface WatchProviderResponse {
     FR?: WatchProviderCountry
     GB?: WatchProviderCountry
     GR?: WatchProviderCountry
+    HK?: WatchProviderCountry
     HU?: WatchProviderCountry
     ID?: WatchProviderCountry
     IE?: WatchProviderCountry

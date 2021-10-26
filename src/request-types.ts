@@ -1470,10 +1470,10 @@ export interface WatchProviderRegionResponse extends Response {
 }
 
 export interface RegionalWatchProviderResponse extends Response {
-  results: Array<WatchProviderResponse>
+  results: Array<RegionalWatchProvider>
 }
 
-export interface WatchProviderResponse {
+export interface RegionalWatchProvider {
   display_priority: number
   provider_id: number
   logo_path: string

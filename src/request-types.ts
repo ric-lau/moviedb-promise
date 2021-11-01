@@ -602,7 +602,7 @@ export interface ChangesResponse extends PaginatedResponse {
   }>
 }
 
-interface WatchProviderCountry {
+export interface WatchProviderCountry {
   link?: string
   rent?: Array<WatchProvider>
   buy?: Array<WatchProvider>

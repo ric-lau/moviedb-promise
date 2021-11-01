@@ -610,7 +610,7 @@ export interface WatchProviderCountry {
   flatrate_and_buy?: Array<WatchProvider>
 }
 
-interface WatchProvider {
+export interface WatchProvider {
   display_priority?: number
   logo_path?: string
   provider_id?: number

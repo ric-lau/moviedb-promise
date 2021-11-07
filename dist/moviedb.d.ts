@@ -1,6 +1,7 @@
 import { AxiosRequestConfig } from 'axios';
 import { AuthenticationToken, RequestParams } from './types';
 import * as types from './request-types';
+import { RegionalRequestParams } from './request-types';
 export declare class MovieDb {
     private apiKey;
     private token;
@@ -177,5 +178,7 @@ export declare class MovieDb {
     review(params: string | number | types.IdRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.Review>;
     episodeGroup(params: string | number | types.IdRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.EpisodeGroupResponse>;
     watchProviderRegions(params?: any, axiosConfig?: AxiosRequestConfig): Promise<types.WatchProviderRegionResponse>;
+    movieProviders(params: RegionalRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.RegionalWatchProviderResponse>;
+    tvProviders(params: RegionalRequestParams, axiosConfig?: AxiosRequestConfig): Promise<types.RegionalWatchProviderResponse>;
 }
 //# sourceMappingURL=moviedb.d.ts.map

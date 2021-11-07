@@ -525,14 +525,14 @@ export interface ChangesResponse extends PaginatedResponse {
         adult?: boolean | null;
     }>;
 }
-interface WatchProviderCountry {
+export interface WatchProviderCountry {
     link?: string;
     rent?: Array<WatchProvider>;
     buy?: Array<WatchProvider>;
     flatrate?: Array<WatchProvider>;
     flatrate_and_buy?: Array<WatchProvider>;
 }
-interface WatchProvider {
+export interface WatchProvider {
     display_priority?: number;
     logo_path?: string;
     provider_id?: number;
@@ -560,6 +560,7 @@ export interface WatchProviderResponse {
         FR?: WatchProviderCountry;
         GB?: WatchProviderCountry;
         GR?: WatchProviderCountry;
+        HK?: WatchProviderCountry;
         HU?: WatchProviderCountry;
         ID?: WatchProviderCountry;
         IE?: WatchProviderCountry;
@@ -686,6 +687,9 @@ export interface TopRatedMoviesResponse extends DiscoverMovieResponse {
 export interface UpcomingMoviesRequest extends MovieNowPlayingRequest {
     page?: number;
     region?: string;
+}
+export interface RegionalRequestParams extends RequestParams {
+    watch_region: string;
 }
 export interface UpcomingMoviesResponse extends MovieNowPlayingResponse {
     results?: Array<MovieResult>;
@@ -1300,5 +1304,13 @@ export interface WatchProviderRegionResponse extends Response {
         native_name: string;
     }>;
 }
-export {};
+export interface RegionalWatchProviderResponse extends Response {
+    results: Array<RegionalWatchProvider>;
+}
+export interface RegionalWatchProvider {
+    display_priority: number;
+    provider_id: number;
+    logo_path: string;
+    provider_name: string;
+}
 //# sourceMappingURL=request-types.d.ts.map

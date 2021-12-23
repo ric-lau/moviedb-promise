@@ -1441,6 +1441,7 @@ export interface Review {
   author_details?: Author,
   content?: string
   url?: string
+  created_at?: string
 }
 
 export interface Author {

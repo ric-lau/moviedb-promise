@@ -1438,12 +1438,15 @@ export interface NetworkResponse extends Response {
 export interface Review {
   id?: string
   author?: string
+  author_details?: Author,
   content?: string
-  iso_639_1?: string
-  media_id?: number
-  media_title?: string
-  media_type?: string
   url?: string
+}
+
+export interface Author {
+  username?: string,
+  avatar_path?: string,
+  rating?: number,
 }
 
 export interface EpisodeGroupResponse extends Response {

@@ -1444,7 +1444,6 @@ export interface Review {
 }
 
 export interface Author {
-  username?: string,
   avatar_path?: string,
   rating?: number,
 }
